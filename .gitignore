@@ -1,0 +1,8 @@
+*~
+*.bak
+*.log
+*.old
+*.tmp
+.DS_Store
+node_modules/
+tmp/

@@ -1,0 +1,32 @@
+{
+  "name": "http-exception",
+  "version": "0.0.1",
+  "description": "An http exception library",
+  "main": "src/index.js",
+  "author": "Vedran Burdzovic",
+  "license": "MIT",
+  "repository": "https://github.com/vedb/http-exception.git",
+  "scripts": {
+    "precommit": "lint-staged",
+    "prettier": "prettier --no-semi --single-quote --write '**/*.js'",
+    "test": "mocha"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run prettier",
+      "git add ."
+    ]
+  },
+  "keywords": [
+    "http",
+    "error",
+    "exception"
+  ],
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "lodash": "^4.17.5",
+    "mocha": "^4.0.1",
+    "prettier": "^1.7.4"
+  }
+}
