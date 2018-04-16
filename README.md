@@ -10,4 +10,4 @@ npm install --save http-exception
 
 # Licence
 
-[MIT](https://github.com/vedb/http-exception/blob/master/LICENSE
+[MIT](https://github.com/vedb/http-exception/blob/master/LICENSE)
