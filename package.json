@@ -1,6 +1,6 @@
 {
   "name": "http-exception",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An http exception library",
   "main": "src/index.js",
   "author": "Vedran Burdzovic",
