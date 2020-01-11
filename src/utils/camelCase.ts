@@ -1,8 +1,6 @@
-'use strict'
+import capitalize from './capitalize'
 
-const capitalize = require('./capitalize')
-
-module.exports = (string = '') => {
+export default (string = '') => {
   const punctuationRe = /'/g
   const [first = '', ...rest] = string.replace(punctuationRe, '').split(' ')
 

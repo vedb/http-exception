@@ -1,6 +1,4 @@
-'use strict'
-
-module.exports = (string = '') => {
+export default (string = '') => {
   const whiteSpaceRe = /\s/g
   const punctuationRe = /'/gi
 

@@ -4,5 +4,6 @@
 *.old
 *.tmp
 .DS_Store
+dist/
 node_modules/
 tmp/

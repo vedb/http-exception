@@ -1,9 +1,10 @@
-'use strict'
-
-const camelCase = require('./utils/camelCase')
-const { defaults, errorStatusCodes } = require('./status')
+import camelCase from './utils/camelCase'
+import { defaults, errorStatusCodes } from './status'
 
 class HttpException extends Error {
+  code: any
+  message: any
+  status: any
   constructor(...args) {
     super(...args)
 
@@ -12,7 +13,7 @@ class HttpException extends Error {
     this.code = defaults.code
     this.status = defaults.status
   }
-  static createError(options = {}) {
+  static createError(options: any) {
     const { message, ...restOptions } = options
     const error = new HttpException(message)
 
@@ -37,4 +38,4 @@ errorStatusCodes.forEach(item => {
   }
 })
 
-module.exports = HttpException
+export default HttpException

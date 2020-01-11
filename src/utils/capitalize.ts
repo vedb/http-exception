@@ -1,4 +1,2 @@
-'use strict'
-
-module.exports = ([first = '', ...rest]) =>
+export default ([first = '', ...rest] = '') =>
   first.toUpperCase() + rest.map(char => char.toLowerCase()).join('')

@@ -32,7 +32,7 @@ npm install --save http-exception
 Once installed, import and use:
 
 ```javascript
-const HttpException = require('http-exception')
+const HttpException = require('http-exception').default
 
 // via the HttpException class
 const errorOne = new HttpException()
