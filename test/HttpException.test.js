@@ -2,9 +2,9 @@
 
 const assert = require('assert')
 const _ = require('lodash/fp')
-const HttpException = require('../src/index')
+const HttpException = require('../src/index').default
 const status = require('../src/status')
-const camelCase = require('../src/utils/camelCase')
+const camelCase = require('../src/utils/camelCase').default
 
 describe('HttpException', function() {
   it('matches Error constructor signature', () => {

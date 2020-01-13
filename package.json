@@ -1,7 +1,7 @@
 {
   "name": "http-exception",
   "version": "0.0.2",
-  "description": "An http exception library",
+  "description": "A small, easy-to-use, and dependency-free http errors library for Node",
   "main": "dist/index.js",
   "author": "Vedran Burdzovic",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "build": "tsc",
     "format": "prettier --no-semi --single-quote --write './{src,test}/**/*.{js,ts}'",
     "lint": "tsc --noEmit",
-    "test": "mocha"
+    "test": "mocha -r ts-node/register"
   },
   "husky": {
     "hooks": {
@@ -34,6 +34,7 @@
     "lodash": "^4.17.15",
     "mocha": "^7.0.0",
     "prettier": "^1.19.1",
+    "ts-node": "^8.6.1",
     "typescript": "^3.7.4"
   }
 }

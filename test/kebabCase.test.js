@@ -2,7 +2,7 @@
 
 const assert = require('assert')
 const _ = require('lodash/fp')
-const kebabCase = require('../src/utils/kebabCase')
+const kebabCase = require('../src/utils/kebabCase').default
 
 describe('kebabCase', () => {
   it('is a function', () => assert(_.isFunction(kebabCase)))

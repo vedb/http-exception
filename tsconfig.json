@@ -5,7 +5,6 @@
     "moduleResolution": "node",
     "outDir": "./dist",
     "removeComments": true,
-    "resolveJsonModule": true,
     "sourceMap": true,
     "target": "ES2015"
   }

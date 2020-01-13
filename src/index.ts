@@ -1,6 +1,11 @@
 import camelCase from './utils/camelCase'
 import { defaults, errorStatusCodes } from './status'
 
+interface Options {
+  [index: string]: any
+  message?: string
+}
+
 class HttpException extends Error {
   code: any
   message: any
@@ -13,7 +18,7 @@ class HttpException extends Error {
     this.code = defaults.code
     this.status = defaults.status
   }
-  static createError(options: any) {
+  static createError(options: Options = {}) {
     const { message, ...restOptions } = options
     const error = new HttpException(message)
 
