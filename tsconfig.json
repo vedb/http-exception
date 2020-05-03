@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "esModuleInterop": true,
     "module": "commonjs",
     "moduleResolution": "node",
@@ -7,5 +8,6 @@
     "removeComments": true,
     "sourceMap": true,
     "target": "ES2015"
-  }
+  },
+  "include": ["src/**/*"]
 }

@@ -1,8 +1,9 @@
 'use strict'
 
 const assert = require('assert')
+const http = require('http')
 const _ = require('lodash/fp')
-const HttpException = require('../src/index').default
+const HttpException = require('../src/index')
 const status = require('../src/status')
 const camelCase = require('../src/utils/camelCase').default
 
@@ -37,16 +38,17 @@ describe('HttpException', function() {
     const error = new HttpException()
 
     const isInternalServerError =
-      error.code === status.defaults.code &&
-      error.message === status.defaults.message &&
-      error.status === status.defaults.status
+      error.code === 'internal-server-error' &&
+      error.message === 'Internal Server Error' &&
+      error.status === 500
 
     assert(isInternalServerError)
   })
 
   it('has static exception methods for each error status code', () => {
     const hasMethods = status.errorStatusCodes.every(item => {
-      const method = camelCase(item.message)
+      const message = http.STATUS_CODES[item]
+      const method = camelCase(message)
 
       return HttpException[method]
     })
@@ -89,8 +91,9 @@ describe('HttpException', function() {
   describe('exception partials', () => {
     it('match Error constructor signature', () => {
       const matchErrorSignature = status.errorStatusCodes.every(item => {
-        const method = camelCase(item.message)
+        const method = camelCase(http.STATUS_CODES[item])
         const message = 'message'
+
         const error = HttpException[method](message)
 
         return error.message === message
@@ -101,7 +104,8 @@ describe('HttpException', function() {
 
     it('return an instance of HttpException', () => {
       const areInstances = status.errorStatusCodes.every(item => {
-        const method = camelCase(item.message)
+        const method = camelCase(http.STATUS_CODES[item])
+
         const error = HttpException[method]()
 
         return error instanceof HttpException
