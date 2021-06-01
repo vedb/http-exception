@@ -7,7 +7,7 @@ const HttpException = require('../src/index')
 const status = require('../src/status')
 const camelCase = require('../src/utils/camelCase')
 
-describe('HttpException', function() {
+describe('HttpException', function () {
   it('matches Error constructor signature', () => {
     const message = 'message'
     const error = new HttpException(message)

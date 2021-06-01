@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": "https://github.com/vedrxn/http-exception.git",
   "scripts": {
-    "format": "prettier --no-semi --single-quote --write './{src,test}/**/*.js'",
+    "format": "prettier --write '**/*.js'",
     "test": "mocha"
   },
   "husky": {
@@ -17,7 +17,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier --no-semi --single-quote --write",
+      "prettier --write",
       "git add"
     ]
   },
@@ -31,6 +31,6 @@
     "lint-staged": "^9.5.0",
     "lodash": "^4.17.15",
     "mocha": "^8.4.0",
-    "prettier": "^1.19.1"
+    "prettier": "^2.3.0"
   }
 }

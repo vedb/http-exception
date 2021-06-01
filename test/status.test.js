@@ -5,7 +5,7 @@ const http = require('http')
 const _ = require('lodash/fp')
 const status = require('../src/status')
 
-describe('status', function() {
+describe('status', function () {
   describe('isErrorStatus', () => {
     it('returns true for numbers greater or equal than 400', () => {
       const numbers = Array(10)
