@@ -29,7 +29,7 @@
   "devDependencies": {
     "husky": "^4.0.6",
     "lint-staged": "^9.5.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mocha": "^8.4.0",
     "prettier": "^2.3.0"
   }
