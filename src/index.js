@@ -1,8 +1,8 @@
 'use strict'
 
 const http = require('http')
-const camelCase = require('./utils/camelCase').default
-const kebabCase = require('./utils/kebabCase').default
+const camelCase = require('./utils/camelCase')
+const kebabCase = require('./utils/kebabCase')
 const { errorStatusCodes } = require('./status')
 
 class HttpException extends Error {

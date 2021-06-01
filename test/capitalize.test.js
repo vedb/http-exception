@@ -2,7 +2,7 @@
 
 const assert = require('assert')
 const _ = require('lodash/fp')
-const capitalize = require('../src/utils/capitalize').default
+const capitalize = require('../src/utils/capitalize')
 
 describe('capitalize', () => {
   it('is a function', () => assert(_.isFunction(capitalize)))

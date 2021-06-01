@@ -5,7 +5,7 @@ const http = require('http')
 const _ = require('lodash/fp')
 const HttpException = require('../src/index')
 const status = require('../src/status')
-const camelCase = require('../src/utils/camelCase').default
+const camelCase = require('../src/utils/camelCase')
 
 describe('HttpException', function() {
   it('matches Error constructor signature', () => {

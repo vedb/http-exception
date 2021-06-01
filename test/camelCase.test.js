@@ -2,7 +2,7 @@
 
 const assert = require('assert')
 const _ = require('lodash/fp')
-const camelCase = require('../src/utils/camelCase').default
+const camelCase = require('../src/utils/camelCase')
 
 describe('camelCase', () => {
   it('is a function', () => assert(_.isFunction(camelCase)))

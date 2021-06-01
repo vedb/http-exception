@@ -1,7 +1,7 @@
 'use strict'
 
 const assert = require('assert')
-import http from 'http'
+const http = require('http')
 const _ = require('lodash/fp')
 const status = require('../src/status')
 

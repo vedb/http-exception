@@ -1,4 +1,4 @@
-export default (string = '') => {
+const kebabCase = (string = '') => {
   const whiteSpaceRe = /\s/g
   const punctuationRe = /'/gi
 
@@ -7,3 +7,5 @@ export default (string = '') => {
     .replace(punctuationRe, '')
     .toLowerCase()
 }
+
+module.exports = kebabCase
